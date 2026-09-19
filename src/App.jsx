@@ -4,13 +4,14 @@ import ListWithKey from "./components/ListWithKey";
 import ListWithoutKey from "./components/ListWithoutKey";
 
 const arr = [];
-for (let i = 1; i < 1001; i++) {
+for (let i = 1; i < 6; i++) {
   arr.push({ id: crypto.randomUUID(), title: `Элемент ${i}` });
 }
 
 function App() {
   const [list, setList] = useState(arr);
   const [withKey, setWithKey] = useState(true);
+
   return (
     <>
       <Buttons list={list} setList={setList} />
